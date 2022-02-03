@@ -1,0 +1,82 @@
+#lists
+#method1:  using !!seq
+student:  !!seq
+- name
+- roll_no
+- Location
+
+#method2: using square brackets 
+cities: [hyd, madras, mumbai]
+---
+
+#sometimes we may have empty keys in sequences
+#then we use sparse seq
+sparse seq:
+- my
+- name
+- is 
+-            #empty key is taken as NULL
+- I am 
+-null
+---
+
+#nested sequence
+-               #1st sequence
+ - mango
+ - apple
+ - banana
+-               #2nd sequence
+ - marks
+ - roll No
+ - date
+ #maps or key value pairs
+ name: karthik  #key value pairs
+ #nested key value pairs
+
+ name: Karthik
+role: 
+    age: 21
+    job: student 
+
+#the above is same as
+name:karthik
+role: {age: 21, job: student}
+
+
+#pair datatype
+#In this key is having duplicate or multiple values
+#!!pair
+pair example: !!pair
+-job: student
+-job: teacher
+#this will be array of hashtables
+#same as
+pair example: !!pair [job: student , job: teacher]
+
+#dictionary :  !!omap
+people: !!omap
+- student1:
+    name: karthik
+    age: 68
+    height: 578
+- student2:
+    name: pranav
+    age: 11
+    height: 463923
+
+#if we want to repeat same thing again in other functions
+#we use anchors
+likings:  &likes
+    fav fruit: apple
+    dislikes:  strawberries
+person1:
+    name: karthik
+    <<: *likes   #copies and pastes here from likings
+person2:
+    name: kunal
+    <<: *likes
+    dislikes: banana  #overwrites dislikes which we called from likes
+person3: 
+    name: bhanu
+    fav fruit: banana
+    dislikes: apple

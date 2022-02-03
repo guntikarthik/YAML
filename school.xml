@@ -1,0 +1,12 @@
+<!-- this is the way to add comments-->
+<!--xml is not human readable-->
+<?xml version="1.0" encoding"UTF-8"?>  <!--1st line we should mention version and encoding type-->
+<School name="SDHS" principal="Srinivas">
+     <Students>
+        <Student>
+            <rno>7</rno>
+            <name>"karthik"</name>
+            <marks>93</marks>
+        <Student>
+     </Students>
+</School>

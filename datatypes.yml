@@ -1,0 +1,64 @@
+a: 11  #integer data type
+---
+#strings
+fruit: apple #after colon we should give some space
+fruit1: 'banana'
+fruit2:  "grapes"
+---
+#strings containing various lines
+
+#bio: My name is karthik
+#I am curious to learn coding   
+# note: we get error becoz it assumes every line as key value pair 
+#but in second line we written only single statement without any colon so assumes as error
+
+#to avoid error we use '|' sign after colon
+bio:  |
+My name is karthik Gunti.
+I am curious to learn cse stuff.
+Currently I am pursuing btech. 
+---
+
+#write single line in multiple lines (>)
+message: >
+My 
+name is 
+karthik.
+I 
+love
+playing cricket
+---
+#datatypes
+num: 407
+percentage:  8.71
+Male: Yes
+college: Tkr college of Engineering and technology
+---
+#specify data types (!!Datatype)
+#int
+zero: !!int 0
+positiveNum: !!int 407
+negNum: !!int -33
+binaryNum:  !!int 0b1010 #zero b 1010
+octalNum: !!int 0431 #zero  431
+hexaNum: !!int 0xFFFF  #zero x FFFF
+commaValues: !!int +43_000   #43,000
+---
+#float
+marks: !!float 97.5
+infinite: !!float .inf   #.inf is to represent infinity
+not a num: .nan  #to represent value other than num
+---
+#null and none
+surname: !!null null
+---
+#Arrays are represented using block data structure
+num: [1,2,3,4,5]
+---
+#exponential num
+a: 2E3 #2 power 3
+---
+#date and time 
+date: 02-02-2022  #seperated by hyphens
+time:  02-02-2022T02:45:43
+...                                  

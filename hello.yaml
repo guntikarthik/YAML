@@ -1,0 +1,26 @@
+#In yaml we have dict data type
+#dictionaries
+"apple":"I am red fruit"
+407: "This is  my roll No"
+---
+#lists: starts with hyphen/dash
+-apple
+-grapes
+-banana
+-Apple  #YAML is case sensitive 
+---
+#indentation error occurs if not provided input correctly
+cities:
+ - Hyderabad
+ - Chennai
+ - Banglore
+---
+#we can write yaml files in form of json files
+cities:[hyderabad,chennai]
+---
+#comment multiple lines using #
+#abcd
+#efgh
+#ijkl
+ 
+...
